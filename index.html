@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Joe Ee — Military Aviator · Leader · Innovator</title>
+<meta name="description" content="Joe Ee — Head of Flying Training Branch at PiXEL, Republic of Singapore Air Force. 23 years leading transformations in military aviation. Part-time NUS MBA candidate.">
+<meta property="og:title" content="Joe Ee — Military Aviator · Leader · Innovator">
+<meta property="og:description" content="I specialise in leading transformations. 23 years in the Republic of Singapore Air Force.">
+<meta property="og:type" content="profile">
+<meta property="og:image" content="profile.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚁</text></svg>">
+<style>
+  :root{
+    --bg:#f7f8fa; --surface:#ffffff; --ink:#141a22; --muted:#5c6773;
+    --line:#e4e8ee; --accent:#1d4ed8; --accent-soft:#eef2ff;
+    --radius:16px;
+    --shadow:0 1px 2px rgba(16,24,40,.04), 0 8px 24px rgba(16,24,40,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0d1117; --surface:#151b23; --ink:#e6edf3; --muted:#9aa7b4;
+      --line:#242c37; --accent:#7aa2ff; --accent-soft:#182238;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:ui-sans-serif,-apple-system,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(12px);
+      background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+  .brand{font-weight:700;letter-spacing:-.02em;color:var(--ink)}
+  .navlinks{display:flex;gap:22px;font-size:.92rem}
+  .navlinks a{color:var(--muted)}
+  .navlinks a:hover{color:var(--ink);text-decoration:none}
+  @media(max-width:640px){.navlinks{display:none}}
+
+  header.hero{padding:76px 0 56px;position:relative;overflow:hidden}
+  header.hero::before{content:"";position:absolute;inset:-40% 30% auto -10%;height:420px;
+    background:radial-gradient(closest-side,var(--accent-soft),transparent);pointer-events:none}
+  .hero-inner{position:relative;display:flex;gap:34px;align-items:center;flex-wrap:wrap}
+  .avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;
+    border:3px solid var(--surface);box-shadow:var(--shadow);background:var(--accent-soft)}
+  .hero h1{font-size:clamp(2rem,5vw,3rem);line-height:1.08;letter-spacing:-.03em;margin:0 0 10px}
+  .tagline{font-size:1.15rem;color:var(--muted);margin:0 0 18px;max-width:54ch}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+  .chip{font-size:.8rem;padding:5px 12px;border-radius:999px;background:var(--accent-soft);
+    color:var(--accent);border:1px solid var(--line);font-weight:500}
+  .cta{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:10px;
+    font-size:.92rem;font-weight:600;border:1px solid var(--line);background:var(--surface);
+    color:var(--ink);box-shadow:var(--shadow);transition:transform .15s ease}
+  .btn:hover{text-decoration:none;transform:translateY(-1px)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;
+    margin-top:44px;position:relative}
+  .stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;
+    padding:18px 20px;box-shadow:var(--shadow)}
+  .stat .n{font-size:1.7rem;font-weight:700;letter-spacing:-.03em;line-height:1.2}
+  .stat .l{font-size:.82rem;color:var(--muted);margin-top:2px}
+
+  section{padding:56px 0;border-top:1px solid var(--line)}
+  .eyebrow{font-size:.76rem;text-transform:uppercase;letter-spacing:.12em;
+    color:var(--accent);font-weight:700;margin:0 0 6px}
+  h2{font-size:1.6rem;letter-spacing:-.02em;margin:0 0 22px}
+  p{margin:0 0 16px}
+  .lead{font-size:1.05rem;color:var(--muted);max-width:68ch}
+
+  .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px;box-shadow:var(--shadow)}
+  .card h3{margin:0 0 4px;font-size:1.04rem;letter-spacing:-.01em}
+  .card .org{color:var(--accent);font-weight:600;font-size:.9rem;margin:0 0 2px}
+  .card .meta{color:var(--muted);font-size:.84rem;margin:0 0 10px}
+  .card .body{color:var(--muted);font-size:.93rem;margin:0}
+  .badge{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.04em;
+    padding:3px 9px;border-radius:6px;background:var(--accent);color:#fff;margin-top:10px}
+
+  .role-banner{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);
+    border-radius:12px;padding:18px 22px;margin-bottom:30px;box-shadow:var(--shadow)}
+  .role-banner h3{margin:0;font-size:1.05rem}
+  .role-banner .meta{color:var(--muted);font-size:.86rem}
+
+  .timeline{position:relative;padding-left:30px}
+  .timeline::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--line)}
+  .tl-item{position:relative;margin-bottom:28px}
+  .tl-item:last-child{margin-bottom:0}
+  .tl-item::before{content:"";position:absolute;left:-29px;top:7px;width:14px;height:14px;
+    border-radius:50%;background:var(--surface);border:3px solid var(--accent)}
+  .tl-item.dim::before{border-color:var(--line)}
+  .tl-item h3{margin:0;font-size:1.05rem;letter-spacing:-.01em}
+  .tl-item .org{color:var(--accent);font-weight:600;font-size:.92rem}
+  .tl-item .meta{color:var(--muted);font-size:.84rem;margin:2px 0 8px}
+  .tl-item p{color:var(--muted);font-size:.95rem;margin:0}
+  .tl-item ul{color:var(--muted);font-size:.94rem;margin:6px 0 0;padding-left:18px}
+  .tl-item li{margin-bottom:4px}
+
+  .skill-list{display:flex;flex-wrap:wrap;gap:9px}
+  .skill{font-size:.88rem;padding:7px 14px;border-radius:9px;background:var(--surface);
+    border:1px solid var(--line);box-shadow:var(--shadow);font-weight:500}
+
+  .contact-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+  .contact-card{display:flex;align-items:center;gap:12px;background:var(--surface);
+    border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow);
+    color:var(--ink);transition:transform .15s ease}
+  .contact-card:hover{text-decoration:none;transform:translateY(-2px)}
+  .contact-card .ico{width:34px;height:34px;flex:0 0 34px;border-radius:9px;background:var(--accent-soft);
+    display:grid;place-items:center;color:var(--accent)}
+  .contact-card .lbl{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+  .contact-card .val{font-size:.92rem;font-weight:600;word-break:break-all}
+
+  footer{padding:34px 0 48px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Joe Ee</a>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-inner">
+      <img class="avatar" src="profile.jpg" alt="Joe Ee">
+      <div style="flex:1;min-width:280px">
+        <h1>Joe Ee</h1>
+        <p class="tagline">I specialise in leading transformations. Military aviator, leader, innovator.</p>
+        <div class="chips">
+          <span class="chip">Head, Flying Training Branch · RSAF</span>
+          <span class="chip">NUS MBA Candidate · Part-time</span>
+          <span class="chip">Singapore</span>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="#contact">Get in touch</a>
+          <a class="btn" href="https://www.linkedin.com/in/joe-ee/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/mrjoe-ee" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="n">23+</div><div class="l">Years in the RSAF</div></div>
+      <div class="stat"><div class="n">21</div><div class="l">Years flying</div></div>
+      <div class="stat"><div class="n">4</div><div class="l">Command appointments</div></div>
+      <div class="stat"><div class="n">Top</div><div class="l">Graduate, Joint Command &amp; Staff College</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <p class="eyebrow">About</p>
+    <h2>Leading transformations, driving innovation, developing people</h2>
+    <p class="lead">I've spent 23 years in the Republic of Singapore Air Force — most of it in the air, and a good deal of it changing how the organisation works on the ground.</p>
+    <p class="lead">The pattern in my career is transitions: taking a fleet, a unit or a training system from what it was to what it needs to become. I framed and won approval for the RSAF's CH-47F and H225M acquisitions, then commanded the squadron that transitioned off the Super Puma onto the H225M. I led SOATG, the special operations aviation task group, and today I head the Flying Training Branch, where I'm rebuilding how the Air Force trains its aviators.</p>
+    <p class="lead">Alongside that role I'm reading for an MBA at NUS Business School part-time, with a particular interest in how AI and analytics change operational decision-making. Aviation has spent decades learning to make high-consequence systems safe and reliable. Much of that discipline transfers directly.</p>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <p class="eyebrow">Experience</p>
+    <h2>Republic of Singapore Air Force</h2>
+
+    <div class="role-banner">
+      <h3>Military Pilot</h3>
+      <div class="meta">November 2004 – Present · 21 years</div>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <h3>Head, Flying Training Branch — PiXEL</h3>
+        <div class="meta">February 2024 – Present</div>
+        <p>PiXEL is the department the RSAF stood up to change the way it trains and learns. I lead the transformation of Flying Training within it — rethinking how the Air Force selects, trains and qualifies its aviators, and how that learning is captured and carried forward.</p>
+      </div>
+
+      <div class="tl-item">
+        <h3>Commander, SOATG</h3>
+        <div class="meta">August 2022 – February 2024</div>
+        <p>Led a team of elite aviators supporting special operations — pushing the boundaries of what the platform could do while holding operational readiness for crisis response.</p>
+      </div>
+
+      <div class="tl-item">
+        <h3>Commanding Officer</h3>
+        <div class="meta">October 2020 – August 2022 · Singapore</div>
+        <p>Commanded the squadron through the transition from the Super Puma to the H225M — a full fleet changeover covering aircrew conversion, procedures and operational capability.</p>
+      </div>
+
+      <div class="tl-item">
+        <h3>Deputy Commanding Officer</h3>
+        <div class="meta">November 2018 – October 2020 · Singapore</div>
+        <p>Supported the Commanding Officer in delivering mission success across the squadron's operational commitments.</p>
+      </div>
+
+      <div class="tl-item">
+        <h3>Officer Commanding</h3>
+        <div class="meta">November 2015 – January 2018 · Singapore</div>
+        <p>Accountable for flight mission success — maintaining standards, ensuring safe operations, and developing the people under my command.</p>
+      </div>
+
+      <div class="tl-item">
+        <h3>Staff Officer, Force Development Branch — Air Plans Department</h3>
+        <div class="meta">September 2013 – November 2015</div>
+        <p>Planning the future force structure of the RSAF helicopter fleet.</p>
+        <ul>
+          <li>Framed, tabled and obtained approval for the new CH-47 and H225M acquisitions</li>
+          <li>Operations manager for helicopter procurement and upgrade projects</li>
+          <li>Managed helicopter simulator programmes</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <h3>Helicopter Group Electronic Warfare Officer</h3>
+        <div class="meta">January 2011 – September 2013</div>
+        <p>Drove electronic warfare concept-of-operations development and EW capability development across the Helicopter Group.</p>
+      </div>
+
+      <div class="tl-item dim">
+        <h3>Student Pilot</h3>
+        <div class="meta">October 2002 – November 2004</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <p class="eyebrow">Education</p>
+    <h2>Studies</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Master of Business Administration</h3>
+        <div class="org">NUS Business School</div>
+        <div class="meta">July 2025 – July 2027 · Part-time</div>
+        <p class="body">General management with an emphasis on technology, AI and analytics in business practice — read part-time alongside a full-time role.</p>
+      </div>
+      <div class="card">
+        <h3>Joint Command and Staff College</h3>
+        <div class="org">Defence Academy, Royal Brunei Armed Forces</div>
+        <div class="meta">January – November 2018 · Brunei</div>
+        <p class="body">Senior professional military education in operational planning and command.</p>
+        <span class="badge">Top Graduate</span>
+      </div>
+      <div class="card">
+        <h3>Postgraduate Diploma, International Security</h3>
+        <div class="org">Massey University</div>
+        <div class="meta">2018 · Distinction</div>
+        <p class="body">Strategic and security studies, completed alongside staff college.</p>
+      </div>
+      <div class="card">
+        <h3>Bachelor's Degree, Banking and Finance</h3>
+        <div class="org">Murdoch University</div>
+        <div class="meta">2009 – 2011</div>
+        <p class="body">Undergraduate study pursued in parallel with full-time operational flying.</p>
+      </div>
+      <div class="card">
+        <h3>Diploma, Multimedia Computing</h3>
+        <div class="org">Ngee Ann Polytechnic</div>
+        <div class="meta">1999 – 2002</div>
+        <p class="body">Technical foundation in computing and digital media.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <p class="eyebrow">Skills &amp; Certifications</p>
+    <h2>What I bring</h2>
+    <div class="skill-list" style="margin-bottom:26px">
+      <span class="skill">Creativity &amp; Innovation</span>
+      <span class="skill">Military Leadership</span>
+      <span class="skill">Digital Transformation</span>
+      <span class="skill">Capability Development</span>
+      <span class="skill">Operational Planning</span>
+      <span class="skill">Programme &amp; Project Management</span>
+      <span class="skill">Training Systems Design</span>
+      <span class="skill">People Development</span>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h3>Microsoft Certified Systems Administrator</h3>
+        <div class="meta">MCSA</div>
+      </div>
+      <div class="card">
+        <h3>Microsoft Certified Systems Engineer</h3>
+        <div class="meta">MCSE · Windows 2000 Server</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2>Let's talk</h2>
+    <p class="lead" style="margin-bottom:24px">Open to conversations about aviation, transformation and capability development, AI in operations, and post-MBA opportunities.</p>
+    <div class="contact-grid">
+      <a class="contact-card" href="https://www.linkedin.com/in/joe-ee/" target="_blank" rel="noopener">
+        <span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.76-2.05C20.4 8.65 21 11.1 21 14.3V21h-4v-5.9c0-1.4-.03-3.2-1.95-3.2-1.96 0-2.25 1.53-2.25 3.1V21H9z"/></svg></span>
+        <span><span class="lbl">LinkedIn</span><br><span class="val">/in/joe-ee</span></span>
+      </a>
+      <a class="contact-card" href="mailto:mrjoe@hotmail.sg">
+        <span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></span>
+        <span><span class="lbl">Email</span><br><span class="val">mrjoe@hotmail.sg</span></span>
+      </a>
+      <a class="contact-card" href="https://github.com/mrjoe-ee" target="_blank" rel="noopener">
+        <span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></span>
+        <span><span class="lbl">GitHub</span><br><span class="val">mrjoe-ee</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Joe Ee</span>
+    <span>Built and hosted on GitHub Pages</span>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
